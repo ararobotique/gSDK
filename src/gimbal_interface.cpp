@@ -86,14 +86,14 @@ uint64_t get_time_usec()
 {
     static struct timeval _timestamp;
     gettimeofday(&_timestamp, NULL);
-    return _timestamp.tv_sec * 1000000 + _timestamp.tv_usec;
+    return _timestamp.tv_sec * 1000000ULL + _timestamp.tv_usec;
 }
 
 uint64_t get_time_msec()
 {
     static struct timeval _timestamp;
     gettimeofday(&_timestamp, NULL);
-    return _timestamp.tv_sec * 1000 + _timestamp.tv_usec / 1000;
+    return _timestamp.tv_sec * 1000ULL + _timestamp.tv_usec / 1000ULL;
 }
 
 // ------------------------------------------------------------------------------
