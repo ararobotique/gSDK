@@ -200,7 +200,7 @@ public:
 
     /**
      * @brief Gimbal remote controller type
-     * 
+     *
      */
     enum rc_type_t {
         RC_TYPE_SBUS_FASST = 1,
@@ -499,8 +499,8 @@ public:
 
     /**
      * @brief reuqest gimbal device info message
-     * 
-     * @return Gimbal_Protocol::result_t 
+     *
+     * @return Gimbal_Protocol::result_t
      */
     Gimbal_Protocol::result_t request_gimbal_device_info(void);
 
@@ -578,12 +578,12 @@ public:
     /**
      * @brief Set the external RC type
      * @param type rc type
-     * 
-     * @return Gimbal_Protocol::result_t 
+     *
+     * @return Gimbal_Protocol::result_t
      */
     Gimbal_Protocol::result_t set_rc_type(rc_type_t type);
 
-private:
+public:
 
     /**
      * @brief Gimbal Interface state
@@ -647,7 +647,7 @@ private:
     enum serial_thread_status_t {
         THREAD_NOT_INIT = 0,
         THREAD_RUNNING,
-        THREAD_IDLING,        
+        THREAD_IDLING,
     };
 
     /**
